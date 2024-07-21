@@ -56,8 +56,8 @@ def analyze_sentence(sentence):
     return result
 
 # 테스트 문장
-sentence = "Hello darkness my old friend, I've come to talk with you again."
 sentence = ""
+sentence = "I will declare a war on python and will not receive any rebuttal"
 analysis = analyze_sentence(sentence)
 
 new_sentence = ""
@@ -66,6 +66,6 @@ for r in analysis.keys():
         new_sentence += analysis[r]['Synonyms'][random.randint(0, len(analysis[r]['Synonyms']) - 1)] + ' '
     else:
         new_sentence += r + ' '
-        
+
 print(analysis)
 print(new_sentence)
